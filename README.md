@@ -1,17 +1,17 @@
 # deflat
 
-Update the python scripts in the following artical :
+
+Cause [angr](https://github.com/angr/angr) & [BARF](https://github.com/programa-stic/barf-project) have refactor some API . Update the python scripts in the following artical :
 
 [(腾讯安全应急响应中心 Tencent Security Response Center) 博客 利用符号执行去除控制流平坦化](https://security.tencent.com/index.php/blog/msg/112)
-
-Cause [angr](https://github.com/angr/angr) & [BARF](https://github.com/programa-stic/barf-project) have refactor some API . 2018-05-07 
+ 
 
 ## usage
 
 Open your termial and issue `mkvirtualenv angr`
 and `cd` to your scripts directory, then issue `python deflat.py check_passwd_flat 0x400530`
 
-Note the address '0x400530' is copied from IDA. Following is the output:
+Note the address '0x400530' is copied from IDA/Hopper. Following is the output:
 
 ```javascript
 (angr) MacBookPro$ python deflat.py check_passwd_flat 0x400530
