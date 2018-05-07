@@ -11,7 +11,7 @@ Cause [angr](https://github.com/angr/angr) & [BARF](https://github.com/programa-
 Open your termial and issue `mkvirtualenv angr`
 and `cd` to your scripts directory, then issue `python deflat.py check_passwd_flat 0x400530`
 
-Note the address (of function check_password) `0x400530` is copied from IDA. is copied from IDA/Hopper. Following is the output:
+Note the address (of function *check_password*) `0x400530` is copied from IDA. is copied from IDA/Hopper. Following is the output:
 
 ```javascript
 (angr) MacBookPro$ python deflat.py check_passwd_flat 0x400530
