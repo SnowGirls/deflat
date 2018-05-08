@@ -14,10 +14,10 @@ Cause [angr](https://github.com/angr/angr) & [BARF](https://github.com/programa-
 
 ## usage
 
-1. Open your terminal and install [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/)
-2. Issue `mkvirtualenv angrenv` to create a virtualenv
-3. In the virtualenv you created above, install [angr](https://github.com/angr/angr) & [BARF](https://github.com/programa-stic/barf-project)
-4. Issue `python deflat.py check_passwd_flat 0x400530` in your script's directory
+* Open your terminal and install [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/)
+* Issue `mkvirtualenv angrenv` to create a virtualenv
+* In the virtualenv you created above, install [angr](https://github.com/angr/angr) & [BARF](https://github.com/programa-stic/barf-project)
+* Issue `python deflat.py check_passwd_flat 0x400530` in your script's directory
 
 Note the address (of function *check_password*) `0x400530` is copied from IDA/Hopper. Following is the output:
 
