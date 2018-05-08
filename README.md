@@ -5,6 +5,7 @@ Cause [angr](https://github.com/angr/angr) & [BARF](https://github.com/programa-
 
 [(腾讯安全应急响应中心 Tencent Security Response Center) 博客 利用符号执行去除控制流平坦化](https://security.tencent.com/index.php/blog/msg/112)
  
+ 
 ## requirements
 
 * Install [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/)
@@ -13,10 +14,13 @@ Cause [angr](https://github.com/angr/angr) & [BARF](https://github.com/programa-
 
 ## usage
 
-Open your terminal and issue `mkvirtualenv angrenv` or `workon angrenv`
-and `cd` to your scripts directory, then issue `python deflat.py check_passwd_flat 0x400530`
+1. Open your terminal and install [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/)
+2. Issue `mkvirtualenv angrenv` to create a virtualenv
+3. In the virtualenv you created above, install [angr](https://github.com/angr/angr) & [BARF](https://github.com/programa-stic/barf-project)
+4. Issue `python deflat.py check_passwd_flat 0x400530` in your script's directory
 
 Note the address (of function *check_password*) `0x400530` is copied from IDA/Hopper. Following is the output:
+
 
 ```javascript
 (angrenv) MacBookPro$ python deflat.py check_passwd_flat 0x400530
