@@ -5,16 +5,21 @@ Cause [angr](https://github.com/angr/angr) & [BARF](https://github.com/programa-
 
 [(腾讯安全应急响应中心 Tencent Security Response Center) 博客 利用符号执行去除控制流平坦化](https://security.tencent.com/index.php/blog/msg/112)
  
+## requirements
+
+* Install [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/)
+* Install [angr](https://github.com/angr/angr) in virtualenv.
+* Install [BARF](https://github.com/programa-stic/barf-project) in virtualenv.
 
 ## usage
 
-Open your termial and issue `mkvirtualenv angr`
+Open your terminal and issue `mkvirtualenv angrenv` or `workon angrenv`
 and `cd` to your scripts directory, then issue `python deflat.py check_passwd_flat 0x400530`
 
 Note the address (of function *check_password*) `0x400530` is copied from IDA/Hopper. Following is the output:
 
 ```javascript
-(angr) MacBookPro$ python deflat.py check_passwd_flat 0x400530
+(angrenv) MacBookPro$ python deflat.py check_passwd_flat 0x400530
 
 *******************relevant blocks************************
 prologue:0x400530
@@ -60,6 +65,6 @@ relevant_blocks: ['0x4007ec', '0x40080d', '0x400819', '0x400837', '0x40084e', '0
 ************************patch*****************************
 Successful! The recovered file: check_passwd_flat.recovered
 
-(angr) MacBookPro$
+(angrenv) MacBookPro$
 ```
 
